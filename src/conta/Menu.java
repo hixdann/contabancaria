@@ -2,11 +2,24 @@ package conta;
 
 import java.util.Scanner;
 
+import conta.model.Conta;
 import conta.util.Cores;
 
 public class Menu {
 
 	public static void main(String[] args) {
+		
+		//Instanciamento | Classe -> Objeto Utilizavel
+		Conta c1 = new Conta(123456, 0001, 1, "Maria das Neves", 500f);
+		c1.setSaldo(5000f);
+		c1.visualizar();
+		c1.sacar(12000f);
+		c1.visualizar();
+		c1.depositar(5000f);
+		c1.visualizar();
+		
+		System.out.println("Titular: " + c1.getTitular());
+		System.out.println("Saldo: " + c1.getSaldo());
 		
 		Scanner leia = new  Scanner(System.in);
 		
